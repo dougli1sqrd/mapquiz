@@ -29,7 +29,7 @@ export const QuizGame = ({ }) => {
         setGameState(GAME_FINISHED);
     }
 
-    return <QuizMap key={geo} started={gameState === PLAYING} endGame={endGame} autoPlay={true} initialStudyTime={initStudyTime} numberStudies={numberStudies} studyTime={studyTime}>
+    return <QuizMap key={geo} started={gameState === PLAYING} endGame={endGame} autoPlay={false} initialStudyTime={initStudyTime} numberStudies={numberStudies} studyTime={studyTime}>
         <GameOverlay startGame={startGame} newGame={newGame} gameState={gameState} setInitialStudyTime={setInitStudyTime} setNumberStudies={setNumberStudies} setStudyTime={setStudyTime} gameData={gameData}/>
     </QuizMap>;
 };
