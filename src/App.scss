@@ -1,0 +1,135 @@
+
+///* Map CSS */
+
+$background: #344568;
+$unknown: #77285b;
+$unknown-border: #7a91e9;
+$selected: #8a1d00;
+$selected-border: #ff859a;
+$correct: #009a70;
+$correct-border: #005500;
+$text-color: #fff5ed;
+$info-text: #d3f5ff;
+
+
+body {
+    background: $background;
+    color: $text-color;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.leaflet-container { height: 90vh;  }
+
+.height-100v {
+    height: 100vh;
+}
+
+.width-800 {
+    width: 800px;
+}
+
+.width-60p {
+    width: 60%;
+}
+
+.float-left {
+    float: left;
+}
+
+.country-label {
+    border: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    color: $text-color !important;
+    font-weight: 900;
+}
+
+.studying {
+    animation: opacitymove 4s linear infinite;
+}
+
+.map-background {
+    background: $background;
+}
+
+.map-fill-unknown {
+    fill-opacity: 1;
+    fill: $unknown;
+    color: $unknown-border;
+}
+
+.map-fill-selected {
+    fill-opacity: 1;
+    fill: $selected !important;
+    color: $selected-border;
+}
+
+.map-fill-correct {
+    fill-opacity: 1;
+    fill: $correct;
+    color: $correct-border;
+}
+
+@keyframes opacitymove {
+    70% {opacity: 0.4;}
+}
+
+.info-panel {
+    color: $info-text;
+    border: 5px solid $correct;
+    border-radius: 5px;
+    background-color: $correct-border;
+    padding: 5;
+    margin: 20px;
+}
+
+.map-container {
+    box-shadow: inset 0px 0px 5px 3px $unknown;
+    border: 2px solid $selected
+}
+
+.select-zlevel {
+    z-index: 100;
+}
+
+.fake-digital {
+    font-weight: 700;
+    font-size: 1.7rem;
+    background-color: #103030;
+    outline: #060606 solid 2px  ;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0px 0px 3px #ff859a;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.start-overlay-visible {
+    position: absolute;
+    display: block;
+    z-index: 2000;
+    width: inherit;
+    height: inherit;
+}
+
+.start-overlay-invisible {
+    position: absolute;
+    display: none;
+    z-index: 2000;
+    width: inherit;
+    height: inherit;
+}
+
+.start-overlay-style {
+    background-color: rgba($background, 0.9);
+    border: 3px;
+}
+
+.end-overlay-style {
+    background-color: rgba($correct, 0.9);
+    border: 3px;
+}
+
+
